@@ -1,0 +1,23 @@
+{
+  "name": "grapesjs-accordion",
+  "version": "1.0.1",
+  "description": "grapesjs-accordion",
+  "main": "dist/grapesjs-accordion.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anubhavjain786/grapesjs-accordion.git"
+  },
+  "scripts": {
+    "start": "grapesjs-cli serve",
+    "build": "grapesjs-cli build",
+    "bump": "npm version patch -m 'Bump v%s'"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin"
+  ],
+  "devDependencies": {
+    "grapesjs-cli": "^1.0.13"
+  },
+  "license": "MIT"
+}
