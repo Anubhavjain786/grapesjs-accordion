@@ -37,6 +37,7 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
               const attrs = model.getAttributes();
               if (attrs[`${attrAccordionContent}`]) {
                 accordionContentID = model.getId();
+                model.setId(accordionContentID);
               } else {
                 model.addAttributes({
                   [selectorAccordion]: `#${accordionContentID}`,
