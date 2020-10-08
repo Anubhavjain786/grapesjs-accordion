@@ -12,8 +12,8 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
         defaults: {
           ...defaultModel.prototype.defaults,
           name: "Accordion Container",
-          draggable: `[${attrAccordions}]`,
-          droppable: `[${config.attrAccordionContent},${config.attrAccordion}]`,
+          draggable: `[${attrAccordions}, ${attrAccordionContent}]`,
+          droppable: false,
           copyable: true,
           removable: true,
           ...config.accordionContainerProps,

@@ -8,6 +8,7 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
         defaults: {
           ...defaultModel.prototype.defaults,
           copyable: false,
+          droppable: false,
           name: "Accordions",
 
           "attr-accordions": config.attrAccordions,
