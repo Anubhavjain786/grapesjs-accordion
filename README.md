@@ -2,6 +2,7 @@
 
 [![Chat](https://img.shields.io/badge/chat-discord-7289da.svg)](https://discord.gg/s2jebu)
 [![npm](https://img.shields.io/npm/v/grapesjs.svg)](https://www.npmjs.com/package/grapesjs-accordion)
+[![npm downloads](https://img.shields.io/npm/v/grapesjs.svg)](https://npm-stat.com/charts.html?package=grapesjs-accordion)
 
 [DEMO](http://grapesjs.com/demo.html)
 
