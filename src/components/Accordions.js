@@ -13,6 +13,7 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
           "attr-accordions": config.attrAccordions,
           "attr-accordion": config.attrAccordion,
           "attr-accordion-content": config.attrAccordionContent,
+          "attr-accordion-container": config.attrAccordionContainer,
           "class-accordion-active": config.classAccordionActive,
           "selector-accordion": config.selectorAccordion,
 
@@ -23,6 +24,8 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
             var attrAccordion = "[" + "{[ attr-accordion ]}" + "]";
             var attrAccordionContent =
               "[" + "{[ attr-accordion-content ]}" + "]";
+            var attrAccordionContainer =
+              "[" + "{[ attr-accordion-container ]}" + "]";
             var classAccordionActive = "{[ class-accordion-active ]}";
             var selectorAccordion = "{[ selector-accordion ]}";
             var body = document.body;
@@ -41,31 +44,29 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
             };
 
             var activeAccordion = function (accordionEl) {
-              var accordions = el.querySelectorAll(attrAccordion) || [];
+              var accordionContainers =
+                el.querySelectorAll(attrAccordionContainer) || [];
 
-              for (i = 0; i < accordions.length; i++) {
-                var accordion = accordions[i];
-                var newClass = accordion.className
+              for (i = 0; i < accordionContainers.length; i++) {
+                var accordionContainer = accordionContainers[i];
+                var newClass = accordionContainer.className
                   .replace(classAccordionActive, "")
                   .trim();
-                accordion.className = newClass;
+
+                accordionContainer.className = newClass;
               }
 
               hideContents();
+
               accordionEl.className += " " + classAccordionActive;
-              var accordionContSelector = accordionEl.getAttribute(
-                selectorAccordion
-              );
-              var accordionContent = el.querySelector(accordionContSelector);
-              accordionContent && (accordionContent.style.display = "");
             };
 
-            var accordionToActive = el.querySelector(
-              "." + classAccordionActive + attrAccordion
-            );
-            accordionToActive =
-              accordionToActive || el.querySelector(attrAccordion);
-            accordionToActive && activeAccordion(accordionToActive);
+            var deactiveAccordion = function (accordionEl) {
+              var newClass = accordionEl.className
+                .replace(classAccordionActive, "")
+                .trim();
+              accordionEl.className = newClass;
+            };
 
             el.addEventListener("click", function (e) {
               var target = e.target;
@@ -73,13 +74,17 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
                 el.querySelector(target.getAttribute(selectorAccordion)).style
                   .display === "block"
               ) {
+                deactiveAccordion(target.parentElement);
                 el.querySelector(
                   target.getAttribute(selectorAccordion)
                 ).style.display = "none";
               } else {
+                activeAccordion(target.parentElement);
                 el.querySelector(
                   target.getAttribute(selectorAccordion)
                 ).style.display = "block";
+
+                // console.log(target.parentElement);
               }
             });
           },

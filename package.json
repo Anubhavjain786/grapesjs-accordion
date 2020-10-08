@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-accordion",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "grapesjs-accordion",
   "main": "dist/grapesjs-accordion.min.js",
   "repository": {
@@ -14,10 +14,17 @@
   },
   "keywords": [
     "grapesjs",
-    "plugin"
+    "plugin",
+    "accordion",
+    "grapesjs-accordion",
+    "grapesjs-tabs"
   ],
   "devDependencies": {
     "grapesjs-cli": "^1.0.13"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anubhavjain786/grapesjs-accordion/issues"
+  },
+  "homepage": "https://github.com/Anubhavjain786/grapesjs-accordion#readme"
 }
