@@ -2,17 +2,10 @@
 
 <!-- [START badges] -->
 
-<!-- [![Chat](https://img.shields.io/badge/chat-discord-7289da.svg)](https://discord.gg/s2jebu)
-[![npm](https://img.shields.io/npm/v/grapesjs-accordion.svg)](https://www.npmjs.com/package/grapesjs-accordion)
-
-[![Build status](https://img.shields.io/travis/com/puppeteer/puppeteer/main.svg)](https://travis-ci.com/github/Anubhavjain786/grapesjs-accordion)
-[![npm downloads](https://img.shields.io/npm/v/grapesjs-accordion.svg)](https://npm-stat.com/charts.html?package=grapesjs-accordion) -->
-
 <p align="center">
   <a href="https://www.npmjs.com/package/grapesjs-accordion"><img src="https://img.shields.io/npm/v/grapesjs-accordion.svg" alt="NPM version" /></a>
-  <a href="https://www.npmjs.com/package/grapesjs-accordion"><img src="https://img.shields.io/npm/v/grapesjs-accordion.svg" alt="NPM downloads" /></a>
-  <a href="https://npm-stat.com/charts.html?package=grapesjs-accordion"><img src="https://img.shields.io/npm/v/grapesjs-accordion.svg" alt="NPM Stat" /></a>
-  <a href="https://travis-ci.com/github/Anubhavjain786/grapesjs-accordion"><img src="https://travis-ci.org/Anubhavjain786/grapesjs-accordion.svg?branch=master" alt="Travis build" /></a>
+  <a href="https://www.npmjs.com/package/grapesjs-accordion"><img src="https://img.shields.io/npm/dw/grapesjs-accordion.svg" alt="NPM downloads" /></a>
+  <a href="https://travis-ci.com/github/Anubhavjain786/grapesjs-accordion"><img src="https://api.travis-ci.com/Anubhavjain786/grapesjs-accordion.svg?branch=master&status=passed" alt="Travis build" /></a>
   <a href="https://discord.gg/s2jebu"><img src="https://img.shields.io/badge/chat-discord-7289da.svg" alt="Chat Discord" /></a>
   <a href="https://github.com/Anubhavjain786/grapesjs-accordion/issues"><img src="https://img.shields.io/github/issues/Anubhavjain786/grapesjs-accordion.svg" alt="GitHub issues" /></a>
   <a href="https://david-dm.org/Anubhavjain786/grapesjs-accordion"><img src="https://img.shields.io/david/Anubhavjain786/grapesjs-accordion.svg" alt="dependencies status"></a>
