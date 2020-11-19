@@ -111,15 +111,7 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
         !comps.length && comps.add(config.template);
       },
 
-      onRender() {
-        const accordionContainer = this.model.find(
-          `[${config.attrAccordionContainer}]`
-        )[0];
-        accordionContainer &&
-          accordionContainer.components().each((el) => {
-            accordionContainer.onAdd(el);
-          });
-      },
+      onRender() {},
     }),
   });
 };

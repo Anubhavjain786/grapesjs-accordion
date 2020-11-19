@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-accordion",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "grapesjs-accordion",
   "main": "dist/grapesjs-accordion.min.js",
   "repository": {
