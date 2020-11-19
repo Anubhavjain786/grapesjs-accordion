@@ -71,19 +71,17 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
 
             el.addEventListener("click", function (e) {
               var target = e.target;
-              if (
-                el.querySelector(target.getAttribute(selectorAccordion)).style
-                  .display === "block"
-              ) {
+              let attrib = el.querySelector(
+                target.getAttribute(selectorAccordion)
+              );
+
+              if (attrib && attrib.style.display === "block") {
                 deactiveAccordion(target.parentElement);
-                el.querySelector(
-                  target.getAttribute(selectorAccordion)
-                ).style.display = "none";
+                attrib.style.display = "none";
               } else {
                 activeAccordion(target.parentElement);
-                el.querySelector(
-                  target.getAttribute(selectorAccordion)
-                ).style.display = "block";
+
+                attrib.style.display = "block";
 
                 // console.log(target.parentElement);
               }

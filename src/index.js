@@ -55,20 +55,20 @@ export default (editor, opts = {}) => {
       // Default accordions template
       template: `
       <div ${attrAccordionContainer}>
-        <a href="#accordion1" ${attrAccordion}>Accordion 1</a>
-        <div id="accordion1" ${attrAccordionContent}>
+        <a  ${attrAccordion}>Accordion 1</a>
+        <div ${attrAccordionContent}>
           <div>Accordion 1 Content</div>
         </div>
       </div>
       <div ${attrAccordionContainer}>
-        <a href="#accordion2" ${attrAccordion}>Accordion 2</a>
-        <div id="accordion2" ${attrAccordionContent}>
-          <div>Accordion 2 Content</div>
+        <a  ${attrAccordion}>Accordion 2</a>
+        <div ${attrAccordionContent}>
+          <div>Accordion 2 Content</div> 
         </div>      
       </div>
       <div ${attrAccordionContainer}>
-        <a href="#accordion3" ${attrAccordion}>Accordion 3</a>
-        <div id="accordion3" ${attrAccordionContent}>
+        <a  ${attrAccordion}>Accordion 3</a>
+        <div ${attrAccordionContent}>
           <div>Accordion 3 Content</div>
         </div>
       </div>

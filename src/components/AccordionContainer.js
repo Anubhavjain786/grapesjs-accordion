@@ -27,9 +27,8 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
           this.listenTo(this, "add", this.onAdd);
         },
 
-        onAdd(model, value, opts = {}) {
-          const componentModels = model || this.components().models;
-
+        onAdd() {
+          const componentModels = this.components().models;
           if (componentModels && Array.isArray(componentModels)) {
             let accordionContentID;
             for (let i = componentModels.length - 1; i >= 0; i--) {
