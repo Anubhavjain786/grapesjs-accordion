@@ -58,8 +58,12 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
               }
 
               hideContents();
-
               accordionEl.className += " " + classAccordionActive;
+              var accordionContSelector = accordionEl.getAttribute(
+                selectorAccordion
+              );
+              var accordionContent = el.querySelector(accordionContSelector);
+              accordionContent && (accordionContent.style.display = "");
             };
 
             var deactiveAccordion = function (accordionEl) {
@@ -71,19 +75,18 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
 
             el.addEventListener("click", function (e) {
               var target = e.target;
-              let attrib = el.querySelector(
-                target.getAttribute(selectorAccordion)
-              );
 
-              if (attrib && attrib.style.display === "block") {
-                deactiveAccordion(target.parentElement);
-                attrib.style.display = "none";
-              } else {
-                activeAccordion(target.parentElement);
-
-                attrib.style.display = "block";
-
-                // console.log(target.parentElement);
+              if (matches.call(target, attrAccordion)) {
+                let attrib = el.querySelector(
+                  target.getAttribute(selectorAccordion)
+                );
+                if (attrib && attrib.style.display === "block") {
+                  deactiveAccordion(target.parentElement);
+                  attrib.style.display = "none";
+                } else {
+                  activeAccordion(target.parentElement);
+                  attrib.style.display = "block";
+                }
               }
             });
           },
